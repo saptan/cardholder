@@ -11,11 +11,11 @@ public class EditCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_card);
 
-        TextView titletext3 = findViewById(R.id.textView3);
+        TextView idCard = findViewById(R.id.idCard);
 
-        TextView titletext4 = findViewById(R.id.textView4);
+        TextView titleCard = findViewById(R.id.titleCard);
 
-        TextView titletext5 = findViewById(R.id.textView5);
+        TextView srcPhoto = findViewById(R.id.srcPhoto);
 
         Bundle arguments = getIntent().getExtras();
         if(arguments == null)
@@ -29,12 +29,12 @@ public class EditCardActivity extends AppCompatActivity {
             return;
         }
 
-        Integer id = car1.getID();
+        int id = car1.getID();
         String title1 = car1.getTitle();
         String photo = car1.getPhoto();
-        titletext3.setText("ID: "+id);
-        titletext4.setText("Название: "+title1);
-        titletext5.setText("Ссылка на фото: "+photo);
+        idCard.setText("ID: "+id);
+        titleCard.setText("Название: "+title1);
+        srcPhoto.setText("Ссылка на фото: "+photo);
 
 
     }

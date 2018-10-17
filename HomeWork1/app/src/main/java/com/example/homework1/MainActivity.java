@@ -10,28 +10,32 @@ import com.example.homework1.card;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    card card1 = new card();
+    card card2 = new card();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView titletext1 = findViewById(R.id.textView);
-        TextView titletext2 = findViewById(R.id.textView2);
+        TextView titleCARD1 = findViewById(R.id.title1);
+        TextView titleCARD2 = findViewById(R.id.title2);
 
 
-        titletext1.setText("Карта: Лента");
-        titletext2.setText("Карта: Доминго");
-    }
+        titleCARD1.setText("Карта: Лента");
+        titleCARD2.setText("Карта: Доминго");
 
-
-    public void onClick(View view) {
-        card card1 = new card();
         card1.setID(1);
         card1.setTitle("Лента");
         card1.setPhoto("https://goo.gl/eQRqVq");
 
+        card2.setID(2);
+        card2.setTitle("Доминго");
+        card2.setPhoto("https://goo.gl/65NeMq");
+    }
+
+
+    public void onClick(View view) {
         Intent intent = new Intent(this, EditCardActivity.class);
         intent.putExtra(card.class.getSimpleName(), card1);
         startActivity(intent);
@@ -39,11 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick1(View view) {
-        card card2 = new card();
-        card2.setID(2);
-        card2.setTitle("Доминго");
-        card2.setPhoto("https://goo.gl/65NeMq");
-
         Intent intent = new Intent(this, EditCardActivity.class);
         intent.putExtra(card.class.getSimpleName(), card2);
         startActivity(intent);

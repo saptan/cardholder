@@ -3,15 +3,15 @@ package com.example.homework1;
 import java.io.Serializable;
 
 public class card implements Serializable{
-    private  Integer ID;
+    private  int  ID;
     private String Title;
     private String Photo;
 
-    public Integer getID() {
+    public int  getID() {
         return ID;
     }
 
-    public void setID(Integer ID) {
+    public void setID(int  ID) {
         this.ID = ID;
     }
 
