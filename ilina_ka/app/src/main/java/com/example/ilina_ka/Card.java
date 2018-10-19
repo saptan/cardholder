@@ -7,6 +7,7 @@ public class Card implements Serializable {
    private String id;
    private String photo;
 
+
     public String getTitle() {
         return title;
     }
@@ -30,4 +31,6 @@ public class Card implements Serializable {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
-}
+
+
+    }

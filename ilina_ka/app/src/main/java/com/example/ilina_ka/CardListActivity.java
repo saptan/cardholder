@@ -11,16 +11,16 @@ public class CardListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_list2);
 
-        final TextView tvTitle = findViewById(R.id.textView5);
-        final TextView tvId = findViewById(R.id.textView3);
-        final TextView tvPhoto = findViewById(R.id.textView4);
+        final TextView tvTitle = findViewById(R.id.tvTitleLD);
+        final TextView tvId = findViewById(R.id.tvIdLD);
+        final TextView tvPhoto = findViewById(R.id.tvPotLD);
 
         Bundle argument = getIntent().getExtras();
         if (argument == null){
            return;
         }
 
-        Card card = (Card) argument.getSerializable(Card.class.getSimpleName());
+        Card card = (Card) argument.getParcelable(Card.class.getSimpleName());
         if (card == null){
            return;
         }
