@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.45" />
 
     <TextView
-        android:id="@+id/title1"
+        android:id="@+id/tvLenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.281" />
 
     <TextView
-        android:id="@+id/title2"
+        android:id="@+id/tvDomingo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
