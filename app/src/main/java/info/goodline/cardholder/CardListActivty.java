@@ -10,7 +10,7 @@ public class CardListActivty extends AppCompatActivity {
             cardLenta.setId(1);
             cardLenta.setTitle("Лента");
             cardLenta.setPhoto("https://goo.gl/eQRqVq");
-    Card cardDomingo = new Card();
+    Card cardDomingo = new Card(); //посмотреть
         cardDomingo.setId(2);
         cardDomingo.setTitle("Доминго");
         cardDomingo.setPhoto("https://goo.gl/65NeMq");
