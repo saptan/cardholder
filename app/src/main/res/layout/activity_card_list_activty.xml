@@ -7,43 +7,42 @@
     tools:context=".CardListActivty">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvLenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="88dp"
         android:text='Карта "Лента"'
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="16dp"
-        android:onClick="onClick"
+        android:layout_marginTop="13dp"
+        android:onClick="btnLentaClick"
         android:text="посмотреть"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/btnDomingo"
+        app:layout_constraintTop_toBottomOf="@+id/btnDomingo" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvDomingo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
         android:text='Карта "Доминго"'
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnDomingo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="31dp"
-        android:onClick="onClick1"
+        android:onClick="btnDomingoClick"
         android:text="посмотреть"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDomingo"
+        app:layout_constraintStart_toEndOf="@+id/tvDomingo" />
 </android.support.constraint.ConstraintLayout>

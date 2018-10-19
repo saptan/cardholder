@@ -6,30 +6,29 @@ import android.os.Bundle;
 import android.view.View;
 
 public class CardListActivty extends AppCompatActivity {
-
+    Card cardLenta = new Card();
+            cardLenta.setId(1);
+            cardLenta.setTitle("Лента");
+            cardLenta.setPhoto("https://goo.gl/eQRqVq");
+    Card cardDomingo = new Card();
+        cardDomingo.setId(2);
+        cardDomingo.setTitle("Доминго");
+        cardDomingo.setPhoto("https://goo.gl/65NeMq");
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_list_activty);
     }
 
-    public void onClick(View view) {
-            Card card = new Card();
-            card.setId(1);
-            card.setTitle("Лента");
-            card.setPhoto("https://goo.gl/eQRqVq");
+    public void btnLentaClick(View view) {
         Intent intent = new Intent(this, EditCardActivty.class);
-        intent.putExtra(Card.class.getSimpleName(), card);
+        intent.putExtra(Card.class.getSimpleName(), cardLenta);
         startActivity(intent);
     }
 
-    public void onClick1(View view) {
-        Card card = new Card();
-        card.setId(2);
-        card.setTitle("Доминго");
-        card.setPhoto("https://goo.gl/65NeMq");
+    public void btnDomingoClick(View view) {
         Intent intent = new Intent(this, EditCardActivty.class);
-        intent.putExtra(Card.class.getSimpleName(), card);
+        intent.putExtra(Card.class.getSimpleName(), cardDomingo);
         startActivity(intent);
     }
 }
