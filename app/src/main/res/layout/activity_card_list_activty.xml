@@ -7,7 +7,7 @@
     tools:context=".CardListActivty">
 
     <TextView
-        android:id="@+id/tvLenta"
+        android:id="@+id/Lenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnDomingo" />
 
     <TextView
-        android:id="@+id/tvDomingo"
+        android:id="@+id/Domingo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -40,9 +40,9 @@
         android:id="@+id/btnDomingo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="40dp"
         android:onClick="btnDomingoClick"
         android:text="посмотреть"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvDomingo"
-        app:layout_constraintStart_toEndOf="@+id/tvDomingo" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/Domingo"
+        app:layout_constraintStart_toEndOf="@+id/Domingo" />
 </android.support.constraint.ConstraintLayout>

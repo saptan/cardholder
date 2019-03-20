@@ -26,9 +26,7 @@ public class Card implements Parcelable {
         }
     };
 
-    public Card() {
-
-    }
+    public Card() { }
 
     @Override
     public int describeContents() {
