@@ -1,3 +1,4 @@
+
 package info.goodline.cardholder;
 
 import android.support.v7.app.AppCompatActivity;
@@ -11,24 +12,24 @@ public class EditCardActivty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_card_activty);
 
-        final TextView tvTitle = findViewById(R.id.tvTitle);
-        final TextView tvID = findViewById(R.id.tvID);
-        final TextView tvPhoto = findViewById(R.id.tvPhoto);
+        final TextView nTitle = findViewById(R.id.nTitle);
+        final TextView nID = findViewById(R.id.nID);
+        final TextView nPhoto = findViewById(R.id.nPhoto);
 
         Bundle arguments = getIntent().getExtras();
         if (arguments == null) {
             return;
         }
-        Card card=(Card) arguments.getParcelable(Card.class.getSimpleName());
+        Card card=arguments.getParcelable(Card.class.getSimpleName());
         if(card==null){
             return;
         }
-        String title="Карта "+ card.getTitle();
-        String id = "ID: "+card.getId();
-        String photo = "Фото: "+(char) 34+ card.getPhoto()+(char) 34;
+        String title=card.getTitle();
+        String id = "" + card.getId();
+        String photo = card.getPhoto();
 
-        tvTitle.setText(title);
-        tvID.setText(id);
-        tvPhoto.setText(photo);
+        nTitle.setText(title);
+        nID.setText(id);
+        nPhoto.setText(photo);
     }
 }
