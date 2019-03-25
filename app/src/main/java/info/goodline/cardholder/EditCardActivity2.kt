@@ -10,7 +10,7 @@ class EditCardActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_card2)
 
- //       vall nTitle = findViewById(R.id.nTitle)
+ //       val nTitle = findViewById(R.id.nTitle)
         //val nID = findViewById(R.id.nID)
         //val nPhoto = findViewById(R.id.nPhoto)
 
@@ -18,17 +18,11 @@ class EditCardActivity2 : AppCompatActivity() {
 
         val card = arguments.getParcelable<Card2>(Card2::class.java.simpleName) ?: return
 
-        //val title = card.title
-
-        //val photo = card.photo
 
         val idStr: String = card.id.toString()
 
         textView13.text = card.title
         textView14.text = idStr
         textView15.text = card.photo
-
-
-
     }
 }
