@@ -16,13 +16,14 @@ class EditCardActivity2 : AppCompatActivity() {
 
         val arguments = intent.extras ?: return
 
-        val card = arguments.getParcelable<Card2>(Card2::class.java.simpleName) ?: return
-
+        val card = arguments.getParcelable<Card2>("Card2") ?: return
 
         val idStr: String = card.id.toString()
 
+
         textView13.text = card.title
-        textView14.text = idStr
         textView15.text = card.photo
+        textView14.text = idStr
+
     }
 }

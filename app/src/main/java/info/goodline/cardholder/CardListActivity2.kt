@@ -13,6 +13,7 @@ class CardListActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card_list2)
+
     }
 
     fun btnLenta(view: View) {
@@ -26,4 +27,5 @@ class CardListActivity2 : AppCompatActivity() {
         intent.putExtra(Card2::class.java.simpleName, domingo)
         startActivity(intent)
     }
+
 }
