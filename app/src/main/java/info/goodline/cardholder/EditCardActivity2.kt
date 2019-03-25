@@ -10,7 +10,7 @@ class EditCardActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_card2)
 
- //       val nTitle = findViewById(R.id.nTitle)
+ //       vall nTitle = findViewById(R.id.nTitle)
         //val nID = findViewById(R.id.nID)
         //val nPhoto = findViewById(R.id.nPhoto)
 
