@@ -2,6 +2,7 @@ package info.goodline.cardholder
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_edit_card2.*
 
 class EditCardActivity2 : AppCompatActivity() {
 
@@ -9,7 +10,7 @@ class EditCardActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_card2)
 
-        //val nTitle = findViewById(R.id.nTitle)
+ //       val nTitle = findViewById(R.id.nTitle)
         //val nID = findViewById(R.id.nID)
         //val nPhoto = findViewById(R.id.nPhoto)
 
@@ -17,12 +18,17 @@ class EditCardActivity2 : AppCompatActivity() {
 
         val card = arguments.getParcelable<Card2>(Card2::class.java.simpleName) ?: return
 
-        val title = card.title
-        val id = "" + card.id
-        val photo = card.photo
+        //val title = card.title
 
-        //nTitle.setText(title)
-        //nID.setText(id)
-        //nPhoto.setText(photo)
+        //val photo = card.photo
+
+        val idStr: String = card.id.toString()
+
+        textView13.text = card.title
+        textView14.text = idStr
+        textView15.text = card.photo
+
+
+
     }
 }
