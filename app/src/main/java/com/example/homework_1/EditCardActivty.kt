@@ -22,21 +22,17 @@ class EditCardActivty : AppCompatActivity() {
 
     fun backClick(view: View)
     {
-        //val info = card2.cardInfo
         val intent2 = Intent(this, CardListActivity::class.java)
 
-        // intent2.putExtra(EditCardActivty.cardinfo, info)
         startActivity(intent2)
-
     }
 
     fun saveClick(view: View)
     {
-        //textView.visibility = View.INVISIBLE
-        //textView2.visibility = View.INVISIBLE
-        val card1 : Card = Card(InputText1.text.toString(), InputText2.text.toString(), InputText3.text.toString().toInt())
+
+        var card1 = Card(InputText1.text.toString(), InputText2.text.toString(), InputText3.text.toString().toInt())
         val intent3 = Intent(this, CardListActivity::class.java)
-        //intent3.putExtra(CardListActivity.card,card1)
+        intent3.putExtra(Card::class.java.simpleName,card1)
 
 
         startActivity(intent3)

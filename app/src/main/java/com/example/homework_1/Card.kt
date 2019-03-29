@@ -1,12 +1,15 @@
 package com.example.homework_1
 
-class Card(_name: String, _category: String, _percent: Int)
-{
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+
+class Card(var _name: String, var  _category:String, var _percent:Int)
+    : Parcelable {
     var name: String = "Карта"
     var category: String = "Супермаркеты"
     var percent: Int = 10
-    val cardInfo: String
-    get() {return " Карта \"$name\"  \n\n id:  $category  \n\n Фото: $percent"}
 
     init
     {
