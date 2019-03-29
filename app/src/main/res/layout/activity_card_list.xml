@@ -10,7 +10,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarMainActivity"
         style="@style/Toolbar"
-        android:elevation="6dp"/>
+        app:elevation="6dp"/>
 
 
     <android.support.design.widget.FloatingActionButton

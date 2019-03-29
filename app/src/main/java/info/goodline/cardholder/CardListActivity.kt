@@ -1,5 +1,6 @@
 package com.example.cardholderlocal
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -37,19 +38,21 @@ class CardListActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        tvNoCard.visibility = View.INVISIBLE
-        tvPressPlus.visibility = View.INVISIBLE
-        //val arguments = intent.extras ?: return
-        val card: Card = data?.getParcelableExtra(Card::class.java.simpleName) ?: return
+        if(resultCode == Activity.RESULT_OK) {
+            tvNoCard.visibility = View.INVISIBLE
+            tvPressPlus.visibility = View.INVISIBLE
+            //val arguments = intent.extras ?: return
+            val card: Card = data?.getParcelableExtra(Card::class.java.simpleName) ?: return
 
-        tvCardName.text = card.cardName
-        tvCardCategory.text = card.cardCategory
-        tvCardPercent.text = card.cardPercent.toString()
+            tvCardName.text = card.cardName
+            tvCardCategory.text = card.cardCategory
+            tvCardPercent.text = "Скидка " + card.cardPercent.toString() + "%"
 
-        tvCardName.visibility = View.VISIBLE
-        tvCardCategory.visibility = View.VISIBLE
-        tvCardPercent.visibility = View.VISIBLE
-        cardView.visibility = View.VISIBLE
+            tvCardName.visibility = View.VISIBLE
+            tvCardCategory.visibility = View.VISIBLE
+            tvCardPercent.visibility = View.VISIBLE
+            cardView.visibility = View.VISIBLE
+        }
 
     }
 
