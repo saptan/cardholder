@@ -3,11 +3,11 @@ package com.example.cardholderlocal
 import android.os.Parcel
 import android.os.Parcelable
 
-class Card(val title: String?, val id: Int, val photo: String?) : Parcelable {
+class Card(val cardName: String?, val cardCategory: String?, val cardPercent: Int) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readString(),
-            parcel.readInt(),
-            parcel.readString()
+            parcel.readString(),
+            parcel.readInt()
     )
 
 
@@ -16,9 +16,9 @@ class Card(val title: String?, val id: Int, val photo: String?) : Parcelable {
     }
 
     override fun writeToParcel(dest: Parcel?, flags: Int) {
-        dest?.writeString(title)
-        dest?.writeInt(id)
-        dest?.writeString(photo)
+        dest?.writeString(cardName)
+        dest?.writeString(cardCategory)
+        dest?.writeInt(cardPercent)
     }
 
     companion object CREATOR : Parcelable.Creator<Card> {

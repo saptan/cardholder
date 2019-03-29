@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Card Holder</string>
+    <string name="app_name">Мои карты</string>
+    <string name="tvplus">Нажмите "плюс", чтобы добавить первую карту</string>
 </resources>
