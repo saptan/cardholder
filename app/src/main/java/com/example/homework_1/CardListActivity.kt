@@ -11,28 +11,23 @@ class CardListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card_list)
-        setTitle("Card Holder")
+
     }
 
-    val card1 : Card = Card("Лента", 1, "https://goo.gl/eQRqVq")
-    val card2 : Card = Card("Доминго", 2, "https://goo.gl/65NeMq")
+    companion object {
 
-    fun btn1Click(view: View)
+          var card: Card = Card("","",1)
+    }
+
+    fun AddNewCard_Click(view: View)
     {
-        val info = card1.cardInfo
+        //val info = card1.cardInfo
         val intent1 = Intent(this, EditCardActivty::class.java)
 
-        intent1.putExtra(EditCardActivty.cardinfo, info)
+        //intent1.putExtra(EditCardActivty.cardinfo)
         startActivity(intent1)
     }
 
-    fun btn2Click(view: View)
-    {
-        val info = card2.cardInfo
-        val intent2 = Intent(this, EditCardActivty::class.java)
 
-        intent2.putExtra(EditCardActivty.cardinfo, info)
-        startActivity(intent2)
-    }
 
 }
