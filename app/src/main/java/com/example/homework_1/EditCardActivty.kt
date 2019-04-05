@@ -1,5 +1,6 @@
 package com.example.homework_1
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -24,17 +25,23 @@ class EditCardActivty : AppCompatActivity() {
     {
         val intent2 = Intent(this, CardListActivity::class.java)
 
-        startActivity(intent2)
+        setResult(Activity.RESULT_OK)
+        finish()
+
     }
 
     fun saveClick(view: View)
     {
 
-        var card1 = Card(InputText1.text.toString(), InputText2.text.toString(), InputText3.text.toString().toInt())
+        var card1 = Card(NameIT.text.toString(), CategoryIT.text.toString(), PercentIT.text.toString().toInt())
+        val name = NameIT.text.toString()
+        val category = CategoryIT.text.toString()
+        val percent = PercentIT.text.toString()
         val intent3 = Intent(this, CardListActivity::class.java)
         intent3.putExtra(Card::class.java.simpleName,card1)
 
 
-        startActivity(intent3)
+        setResult(Activity.RESULT_OK, intent3)
+        finish()
     }
 }

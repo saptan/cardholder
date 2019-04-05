@@ -20,22 +20,9 @@ class CardListActivity : AppCompatActivity() {
         imageView.visibility = View.INVISIBLE
 
 
-        var arguments = intent.extras
-        var card: Card
 
-        if (arguments != null) {
-            card = arguments.getParcelable(Card::class.java.simpleName) as Card
 
-            textView3.text = card.name
-            textView4.text = card.category
-            textView5.text = "Скидка " + card.percent.toString() + "%"
-            textView.visibility = View.INVISIBLE
-            textView2.visibility = View.INVISIBLE
-            textView3.visibility = View.VISIBLE
-            textView4.visibility = View.VISIBLE
-            textView5.visibility = View.VISIBLE
-            imageView.visibility = View.VISIBLE
-        }
+
     }
 
 
@@ -45,6 +32,34 @@ class CardListActivity : AppCompatActivity() {
         val intent1 = Intent(this, EditCardActivty::class.java)
         startActivity(intent1)
     }
+
+
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+       // if (resultCode == Activity.RESULT_OK) {
+            var arguments = intent.extras
+            var card: Card
+
+                card = arguments.getParcelable(Card::class.java.simpleName) as Card
+
+                textView3.text = card.name
+                textView4.text = card.category
+                textView5.text = "Скидка " + card.percent.toString() + "%"
+                textView.visibility = View.INVISIBLE
+                textView2.visibility = View.INVISIBLE
+                textView3.visibility = View.VISIBLE
+                textView4.visibility = View.VISIBLE
+                textView5.visibility = View.VISIBLE
+                imageView.visibility = View.VISIBLE
+
+       // }
+
+
+    }
+
 
 
 }
