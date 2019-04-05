@@ -43,8 +43,8 @@ class CardListActivity : AppCompatActivity() {
             tvCardName.text = card.name
             tvCategory.text = card.category
             tvPercent.text = "Скидка ${card.percent}%"
-            textView.visibility = View.INVISIBLE
-            textView2.visibility = View.INVISIBLE
+            tvNoCard.visibility = View.INVISIBLE
+            tvStartInfo.visibility = View.INVISIBLE
             tvCardName.visibility = View.VISIBLE
             tvCategory.visibility = View.VISIBLE
             tvPercent.visibility = View.VISIBLE
