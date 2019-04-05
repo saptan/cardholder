@@ -85,40 +85,44 @@
             android:onClick="AddNewCard_Click"
             app:backgroundTint="@color/BackColor"/>
     <TextView
-            android:text="TextView"
-            android:layout_width="85dp"
-            android:layout_height="29dp"
-            android:id="@+id/textView3"
-            android:layout_marginTop="88dp"
+            android:text="Название карты"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCardName"
+            android:layout_marginTop="80dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.0" android:textColor="@android:color/black"
-            android:textSize="16sp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginEnd="280dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp" app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
-            android:text="TextView"
+            android:text="Категория"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:id="@+id/tvCategory" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="332dp" app:layout_constraintTop_toTopOf="@+id/toolbar2"
-            app:layout_constraintHorizontal_bias="0.047"/>
+            android:layout_marginTop="356dp" app:layout_constraintTop_toTopOf="@+id/toolbar2"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
-            android:text="TextView"
+            android:text="Скидка"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="332dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.772"
+            android:id="@+id/tvPercent" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="356dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.979"
             android:textColor="#458B74"/>
     <ImageView
-            android:layout_width="354dp"
-            android:layout_height="197dp" app:srcCompat="@drawable/gaini_47"
+            android:layout_width="393dp"
+            android:layout_height="229dp"
+            app:srcCompat="@drawable/gaini_47"
             android:id="@+id/imageView"
-
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="120dp" app:layout_constraintTop_toTopOf="parent"
-    />
+            android:layout_marginTop="116dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
+
 
 
 </android.support.constraint.ConstraintLayout>
